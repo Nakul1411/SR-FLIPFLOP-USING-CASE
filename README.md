@@ -45,11 +45,8 @@ RegisterNumber:212223240102
 module sr_flipflop(q, q_bar, s, r, clk, reset);
   
   input s, r, clk, reset;
- 
   output reg q;
-  
   output q_bar;
-
   always @(posedge clk) begin
    
     if (!reset) 
