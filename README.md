@@ -43,13 +43,18 @@ Developed by: NAKUL R
 RegisterNumber:212223240102
 */
 module sr_flipflop(q, q_bar, s, r, clk, reset);
+  
   input s, r, clk, reset;
+ 
   output reg q;
+  
   output q_bar;
 
   always @(posedge clk) begin
+   
     if (!reset) 
       q <= 1'b0;
+   
     else begin
       case ({s, r})
         2'b01: q <= 1'b0;
